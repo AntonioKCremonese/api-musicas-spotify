@@ -73,16 +73,15 @@ class AppController {
             return res.status(404).json({ error: 'Não foi encontrada nenhuma playlist' });
         }
         // Trata retorno da api trazendo somente descricao, nome e link da playlist
-        const resposta = retornoApiPlaylist.data.playlists.items.reduce((acumulator,playlist) => {
-            return acumulator = {
-                descricao: playlist.description,
-                nome: playlist.name,
-                playlist: playlist.external_urls.spotify,
-                temperatura: tempConverted + '°C',
-                estilo: estiloMusical
-            }
+        const { description, name, external_urls } = retornoApiPlaylist.data.playlists.items[0];
 
-        },{})
+        const resposta = {
+            descricao: description,
+            nome: name,
+            playlist: external_urls.spotify,
+            temperatura: tempConverted + '°C',
+            estilo: estiloMusical
+        }
         res.json(resposta);
     }
 }
