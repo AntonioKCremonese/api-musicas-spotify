@@ -3,6 +3,6 @@ const AppControler = require('./controllers/AppController');
 
 const routes = new Router();
 
-routes.get('/musicas',AppControler.index);
+routes.get('/playlist',AppControler.index);
 
 module.exports = routes;

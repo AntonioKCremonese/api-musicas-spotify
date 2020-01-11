@@ -9,8 +9,11 @@ module.exports = {
         client_id:'96070e91703e49f6a929a579929da871',
         client_secret:'e557657d66704017a6b0ded58ea324ee'
     },
-    apiSeachPlaylist:{
+    apiSearchPlaylist:{
         url:'https://api.spotify.com/v1/search',
         type:'playlist'
+    },
+    apiGetTracks:{
+        url:'https://api.spotify.com/v1/playlists/{playlist_id}/tracks'
     }
 }
