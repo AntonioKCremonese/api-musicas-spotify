@@ -1,4 +1,4 @@
-# api-musicas-ingaia
+# api-musicas-spotify
 Api que retorna playlist de musica conforme temperatura.
 
 Para executar localmente clonar o repositório e executar os comandos:
